@@ -44,16 +44,10 @@ public abstract class Empleado  implements Comparable<Empleado>{
 	}
 
 	// Metodo que nos compara los empleados por el numero de la SS.
-	public void compareTo(Empleado emple) {
+	public int compareTo(Empleado emple) {
 		int valor = 0;
 		if (numeroSS == emple.getNumeroSS()) {
 			valor = 0;
-		}
-		if (numeroSS > emple.getNumeroSS()) {
-			valor = 1;
-		}
-		if (numeroSS < emple.getNumeroSS()) {
-			valor = -1;
 		}
 		return valor;
 	}// Fin del metodo compareTo
