@@ -1,15 +1,14 @@
 package datos;
 
-
 public abstract class Empleado  implements Comparable<Empleado>{
 
 	// Atributos
 	private String nombre;
 	private String apellidos;
-	private String numeroSS;
+	private int numeroSS;
 
 	// Constructores
-	public Empleado(String nombre, String apellidos, String numeroSS) {
+	public Empleado(String nombre, String apellidos, int numeroSS) {
 
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -28,12 +27,12 @@ public abstract class Empleado  implements Comparable<Empleado>{
 		this.apellidos = apellidos;
 	}
 
-	public void setNumeroSS(String numeroSS) {
+	public void setNumeroSS(int numeroSS) {
 		this.numeroSS = numeroSS;
 	}
 
 	// Metodo que nos devuelve el numero de la SS
-	public String getNumeroSS() {
+	public int getNumeroSS() {
 		return numeroSS;
 	}
 
@@ -48,6 +47,12 @@ public abstract class Empleado  implements Comparable<Empleado>{
 		int valor = 0;
 		if (numeroSS == emple.getNumeroSS()) {
 			valor = 0;
+		}
+		if (numeroSS > emple.getNumeroSS()) {
+			valor = 1;
+		}
+		if (numeroSS < emple.getNumeroSS()) {
+			valor = -1;
 		}
 		return valor;
 	}// Fin del metodo compareTo
