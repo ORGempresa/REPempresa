@@ -45,7 +45,7 @@ public abstract class Empleado implements Comparable<Empleado> {
 	public boolean equals(Object emple) {
 		boolean devolver = false;
 		Empleado alu;
-		// Nos aseguramos que lo que llega es un alumno
+		// Nos aseguramos que lo que llega es un empleado
 		if (emple instanceof Empleado) {
 			emple = (Empleado) emple;
 			if (numeroSS.equals(((Empleado) emple).getNumeroSS())) {
