@@ -42,16 +42,23 @@ public abstract class Empleado implements Comparable<Empleado> {
 		return nombre + "  " + apellidos + "  " + numeroSS;
 	}
 
-	public boolean equals(Object emple) {
-		boolean devolver = false;
-		Empleado alu;
-		// Nos aseguramos que lo que llega es un empleado
-		if (emple instanceof Empleado) {
-			emple = (Empleado) emple;
-			if (numeroSS.equals(((Empleado) emple).getNumeroSS())) {
-				devolver = true;
-			}
+	// Metodo que nos compara los empleados por el numero de la SS.
+	public int compareTo(Empleado emple) {
+		int valor = 0;
+		// Si los numero de la seguridad social se repiten
+		if (numeroSS.equals(emple.getNumeroSS())) {
+			valor = 0;
+			// Ordenados alfabeticamente
+		} else if (numeroSS.compareTo(emple.getNumeroSS()) > 1) {
+			valor = 1;
+		} else if (numeroSS.compareTo(emple.getNumeroSS()) < 1) {
+			valor = -1;
 		}
-		return devolver;
+		return valor;
+	}// Fin del metodo compareTo
+
+	public boolean equals(Object arg0) {
+		return apellidos.equals(arg0);
 	}
+
 }
