@@ -1,14 +1,14 @@
 package datos;
 
-public abstract class Empleado  implements Comparable<Empleado>{
+public abstract class Empleado implements Comparable<Empleado> {
 
 	// Atributos
 	private String nombre;
 	private String apellidos;
-	private int numeroSS;
+	private String numeroSS;
 
 	// Constructores
-	public Empleado(String nombre, String apellidos, int numeroSS) {
+	public Empleado(String nombre, String apellidos, String numeroSS) {
 
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -27,12 +27,12 @@ public abstract class Empleado  implements Comparable<Empleado>{
 		this.apellidos = apellidos;
 	}
 
-	public void setNumeroSS(int numeroSS) {
+	public void setNumeroSS(String numeroSS) {
 		this.numeroSS = numeroSS;
 	}
 
 	// Metodo que nos devuelve el numero de la SS
-	public int getNumeroSS() {
+	public String getNumeroSS() {
 		return numeroSS;
 	}
 
@@ -42,18 +42,16 @@ public abstract class Empleado  implements Comparable<Empleado>{
 		return nombre + "  " + apellidos + "  " + numeroSS;
 	}
 
-	// Metodo que nos compara los empleados por el numero de la SS.
-	public int compareTo(Empleado emple) {
-		int valor = 0;
-		if (numeroSS == emple.getNumeroSS()) {
-			valor = 0;
+	public boolean equals(Object emple) {
+		boolean devolver = false;
+		Empleado alu;
+		// Nos aseguramos que lo que llega es un alumno
+		if (emple instanceof Empleado) {
+			emple = (Empleado) emple;
+			if (numeroSS.equals(((Empleado) emple).getNumeroSS())) {
+				devolver = true;
+			}
 		}
-		if (numeroSS > emple.getNumeroSS()) {
-			valor = 1;
-		}
-		if (numeroSS < emple.getNumeroSS()) {
-			valor = -1;
-		}
-		return valor;
-	}// Fin del metodo compareTo
+		return devolver;
+	}
 }
