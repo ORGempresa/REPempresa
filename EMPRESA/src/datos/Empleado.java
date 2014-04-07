@@ -57,8 +57,5 @@ public abstract class Empleado implements Comparable<Empleado> {
 		return valor;
 	}// Fin del metodo compareTo
 
-	public boolean equals(Object arg0) {
-		return apellidos.equals(arg0);
-	}
 
 }
