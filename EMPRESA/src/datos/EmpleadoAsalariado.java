@@ -2,11 +2,15 @@ package datos;
 
 public class EmpleadoAsalariado extends Empleado{
 	// Atributos
-	private float salarioSemanal;
+	private double salarioSemanal;
+
+	public void setSalarioSemanal(double salarioSemanal) {
+		this.salarioSemanal = salarioSemanal;
+	}
 
 	// Constructor
 	public EmpleadoAsalariado(String nombre, String apellidos, String numSS,
-			float salarioSemanal) {
+			double salarioSemanal) {
 		super(nombre, apellidos, numSS);
 		this.salarioSemanal = salarioSemanal;
 	}

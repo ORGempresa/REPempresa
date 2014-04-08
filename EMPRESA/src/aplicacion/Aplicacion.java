@@ -19,16 +19,53 @@ public class Aplicacion {
 		
 		//Menu
 		int opcion;
-		String mensaje="1.- Añadir empleado\n2.- Borrar empleado.\n3.- Modificar precio hora\n"
-				+ "4.- Modificar tasa comisiones\5.- Modificar salario semanal\n6.- Listar";
+		String mensaje="1.- Añadir empleado\n"
+				+ "2.- Borrar empleado.\n"
+				+ "3.- Modificar precio hora\n"
+				+ "4.- Modificar tasa comisiones\n"
+				+ "5.- Modificar salario semanal\n"
+				+ "6.- Listar\n"
+				+ "7.- Salir";
 		
 		do {
-			opcion=CrearMenus.crearMenu(mensaje, "Gestionar Empresa",6 );
-		} while (opcion!=6);
+			opcion=CrearMenus.crearMenu(mensaje, "Gestionar Empresa",7 );
+			switch(opcion){
+			case 1:
+				añadirEmpleado();
+				break;
+			case 2:
+				borrarEmpleado();
+				break;
+			case 3:
+				modificarSalarios();
+				break;
+			case 4:
+				modificarSalarios();
+				break;
+			case 5:
+				modificarSalarios();
+				break;
+			case 6:
+				listarEmpleados();
+				break;
+			default:
+					break;
+			}
+		} while (opcion!=7);
 		
 	}
-	
-	
+	void añadirEmpleado(){
+		
+	}
+	void borrarEmpleado(){
+		
+	}
+	void modificarSalarios(){
+		
+	}
+	void listarEmpleados(){
+		
+	}
 
 	public static void main(String[] args) {
 		new Aplicacion();
