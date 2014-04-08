@@ -1,8 +1,15 @@
 package aplicacion;
 
+import java.util.Iterator;
+
 import javax.swing.JOptionPane;
 
+import datos.Empleado;
+import datos.EmpleadoAsalariado;
+import datos.EmpleadoPorComision;
+import datos.EmpleadoPorHoras;
 import datos.Empresa;
+import entradadatos.EntradaGraficaDatos;
 import menus.CrearMenus;
 
 public class Aplicacion {
@@ -58,6 +65,15 @@ public class Aplicacion {
 		
 	}
 	void borrarEmpleado(){
+		String numero = JOptionPane.showInputDialog("Número de la SS del empleado a borrar");
+		Empleado emple;
+		Iterator <Empleado> apuntador = empresa.getEmpleados().iterator();
+		while(apuntador.hasNext()) {
+			emple=apuntador.next();
+			if (numero == emple.getNumeroSS()){
+				empresa.bajaEmpleado(emple);
+			}
+		}
 		
 	}
 	void modificarSalarios(){
