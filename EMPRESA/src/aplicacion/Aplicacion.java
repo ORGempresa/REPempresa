@@ -37,12 +37,12 @@ public class Aplicacion {
 	}
 	
 	//Metodo para modificar el slario semanal de los Empleados 
-	public void modificarSalario(){
+	public void modificarSalarios(){
+		//Variables locales
 		String numero;
 		Empleado emple;
 		float salarioSemanal;
 		double salarioBase, tasaComisiones, precioHora;
-		
 		
 		Iterator <Empleado> iterador = empresa.getEmpleados().iterator();
 		emple = iterador.next();
@@ -62,8 +62,7 @@ public class Aplicacion {
 				((EmpleadoPorHoras) emple).setPrecioHora(precioHora);
 			}
 		}
-		
-	}//fin modificarSalario
+	}//fin modificarSalarios
 
 	public static void main(String[] args) {
 		new Aplicacion();
