@@ -11,4 +11,11 @@ public class EmpleadoAsalariado extends Empleado{
 		this.salarioSemanal = salarioSemanal;
 	}
 
+	public void setSalarioSemanal(float salarioSemanal) {
+		this.salarioSemanal = salarioSemanal;
+	}
+
+	//Metodos para cambiar datos
+	
+	
 }

@@ -1,9 +1,14 @@
 package aplicacion;
 
+import java.util.Iterator;
+
 import javax.swing.JOptionPane;
 
+import datos.Empleado;
+import datos.EmpleadoAsalariado;
 import datos.Empresa;
 import menus.CrearMenus;
+
 
 public class Aplicacion {
 	
@@ -28,7 +33,16 @@ public class Aplicacion {
 		
 	}
 	
-	
+	public void modificarSalario(){
+		Iterator <Empleado> iterador = new Iterator();
+		String numero = JOptionPane.showInputDialog("Introduce numero de la SS:");
+		if(numero == Empleado.getNumeroSS()){
+			if(Empleado instanceof EmpleadoAsalariado){
+				EmpleadoAsalariado
+			}
+		}
+		
+	}//fin modificarSalario
 
 	public static void main(String[] args) {
 		new Aplicacion();
