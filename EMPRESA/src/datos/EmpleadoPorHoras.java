@@ -13,4 +13,8 @@ public class EmpleadoPorHoras extends Empleado {
 		this.numHoras = numHoras;
 	}
 
+	public void setPrecioHora(double precioHora) {
+		this.precioHora = precioHora;
+	}
+
 }
