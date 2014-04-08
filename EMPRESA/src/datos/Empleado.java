@@ -15,8 +15,7 @@ public abstract class Empleado  implements Comparable<Empleado>{
 		this.numeroSS = numeroSS;
 	}
 
-	public Empleado() {
-	}
+	public Empleado(){}
 
 	// Métodos para dar valores a los atributos
 	public void setNombre(String nombre) {

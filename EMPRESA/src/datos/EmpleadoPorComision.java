@@ -13,6 +13,8 @@ public class EmpleadoPorComision extends Empleado {
 			this.tasaComisiones=tasaComisiones;
 			this.ventasBrutas=ventasBrutas;
 		}
+	
+	public EmpleadoPorComision(){}
 		
 	public double getTasaComisiones() {
 		return tasaComisiones;
