@@ -35,6 +35,7 @@ public abstract class Empleado implements Comparable<Empleado> {
 	public String getNumeroSS() {
 		return numeroSS;
 	}
+	
 
 	// Método para obtener una cadena de caracteres con los valores de los
 	// atributos
