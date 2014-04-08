@@ -27,8 +27,6 @@ public class Aplicacion {
 		// Menu
 		int opcion;
 
-		String mensaje="1.- Añadir empleado\n2.- Borrar empleado.\n3.- Modificar precio hora\n"
-				+ "4.- Modificar tasa comisiones\n5.- Modificar salario semanal\n6.- Listar\n7.- Salir";
 		do {
 			opcion=CrearMenus.crearMenu(mensaje, "Gestionar Empresa",7 );
 			switch (opcion) {
